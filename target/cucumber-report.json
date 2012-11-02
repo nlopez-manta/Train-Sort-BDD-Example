@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 96315,
+              "duration": 94341,
               "status": "passed"
             },
             "name": "move the next car in \"input\" track into \"exit\" track",
@@ -187,15 +187,12 @@
           },
           {
             "result": {
-              "duration": 63552,
-              "status": "passed"
+              "status": "undefined"
             },
             "name": "check the train is sorted",
             "keyword": "And ",
             "line": 43,
-            "match": {
-              "location": "TrainSortingStories.check_the_train_is_sorted()"
-            }
+            "match": {}
           }
         ],
         "type": "scenario"
@@ -226,15 +223,12 @@
           },
           {
             "result": {
-              "duration": 22105,
-              "status": "passed"
+              "status": "undefined"
             },
             "name": "check the train is sorted",
             "keyword": "Then ",
             "line": 49,
-            "match": {
-              "location": "TrainSortingStories.check_the_train_is_sorted()"
-            }
+            "match": {}
           }
         ],
         "type": "scenario"

@@ -46,31 +46,8 @@ public class SimpleTrainSort implements TrainSort {
 		if (inputTrack.size() == 1 && sideTrack.empty()) {
 			exitTrack.push(inputTrack.pop());
 		} else if (sideTrack.empty()) {
-			sideTrack.push(inputTrack.pop());
-		} else if (inputTrack.empty() && !sideTrack.empty()
-				&& !exitTrack.empty()) {
-			while (!exitTrack.empty()) {
-				inputTrack.push(exitTrack.pop());
-			}
-
-			sideTrack.push(inputTrack.pop());
-		} else if (inputTrack.empty() && !sideTrack.empty()
-				&& exitTrack.empty()) {
-			while (!sideTrack.empty()) {
-				inputTrack.push(sideTrack.pop());
-			}
-
-			while (!inputTrack.empty()) {
-				exitTrack.push(inputTrack.pop());
-			}
-
-			return true;
-		} else if (inputTrack.peek() > sideTrack.peek()) {
-			exitTrack.push(inputTrack.pop());
-		} else if (inputTrack.peek() < sideTrack.peek()) {
-			exitTrack.push(sideTrack.pop());
-			sideTrack.push(inputTrack.pop());
-		}
+			// CONTINUE HERE
+		} 
 
 		return false;
 	}

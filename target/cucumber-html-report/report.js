@@ -57,7 +57,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 242511622,
+  "duration": 191501876,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "TrainSortingStories.train_size_is_equal_to(String)"
 });
 formatter.result({
-  "duration": 69473,
+  "duration": 71052,
   "status": "passed"
 });
 formatter.match({
@@ -87,7 +87,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 115262,
+  "duration": 74604,
   "status": "passed"
 });
 formatter.match({
@@ -104,7 +104,7 @@ formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 96315,
+  "duration": 94341,
   "status": "passed"
 });
 formatter.background({
@@ -242,7 +242,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 63157,
+  "duration": 63946,
   "status": "passed"
 });
 formatter.match({
@@ -259,7 +259,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 44999,
+  "duration": 60395,
   "status": "passed"
 });
 formatter.match({
@@ -276,21 +276,13 @@ formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 54078,
-  "status": "passed"
+  "duration": 644204,
+  "status": "failed",
+  "error_message": "java.lang.AssertionError: Error the conditions do not exist\r\n\tat org.junit.Assert.fail(Assert.java:93)\r\n\tat org.junit.Assert.assertTrue(Assert.java:43)\r\n\tat org.junit.Assert.assertNotNull(Assert.java:526)\r\n\tat org.cucumber.tt.TrainSortingStories.move_the_next_car_in_track_into_track(TrainSortingStories.java:86)\r\n\tat ✽.Then move the next car in \"input\" track into \"side\" track(org\\cucumber\\tt\\TrainSortingStories.feature:18)\r\n"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "greater",
-      "offset": 32
-    }
-  ],
-  "location": "TrainSortingStories.the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 70657,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.match({
   "arguments": [
@@ -306,28 +298,15 @@ formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 93157,
-  "status": "passed"
+  "status": "skipped"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "smaller",
-      "offset": 32
-    }
-  ],
-  "location": "TrainSortingStories.the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 67499,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "TrainSortingStories.move_the_next_car_in_side_track_into_exit_track_and_move_next_car_in_input_track_into_side_track()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 78551,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.match({
   "arguments": [
@@ -343,8 +322,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 83288,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -360,8 +338,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 104210,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -377,35 +354,19 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 62368,
-  "status": "passed"
+  "status": "skipped"
 });
-formatter.match({
-  "location": "TrainSortingStories.move_exit_cars_into_input_track_and_move_first_input_track_into_side_track()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 39474,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "arguments": [
-    {
-      "val": "smaller",
-      "offset": 32
-    }
-  ],
-  "location": "TrainSortingStories.the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String)"
-});
+formatter.match({});
 formatter.result({
-  "duration": 65525,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "TrainSortingStories.move_the_next_car_in_side_track_into_exit_track_and_move_next_car_in_input_track_into_side_track()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 31579,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.match({
   "arguments": [
@@ -421,8 +382,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 83289,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -438,8 +398,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 86841,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -455,15 +414,11 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 84868,
-  "status": "passed"
+  "status": "skipped"
 });
-formatter.match({
-  "location": "TrainSortingStories.move_exit_cars_into_input_track_and_move_first_input_track_into_side_track()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 34342,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.match({
   "arguments": [
@@ -479,8 +434,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 84867,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -496,8 +450,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 95130,
-  "status": "passed"
+  "status": "skipped"
 });
 formatter.match({
   "arguments": [
@@ -513,22 +466,15 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 78946,
-  "status": "passed"
+  "status": "skipped"
 });
-formatter.match({
-  "location": "TrainSortingStories.train_is_sorted_move_cars_into_input_track_and_then_to_exit_track()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 40658,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "TrainSortingStories.check_the_train_is_sorted()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 63552,
-  "status": "passed"
+  "status": "undefined"
 });
 formatter.background({
   "description": "",
@@ -570,21 +516,15 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 101447,
+  "duration": 88420,
   "status": "passed"
 });
-formatter.match({
-  "location": "TrainSortingStories.train_is_sorted()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 274340,
-  "status": "passed"
+  "status": "undefined"
 });
-formatter.match({
-  "location": "TrainSortingStories.check_the_train_is_sorted()"
-});
+formatter.match({});
 formatter.result({
-  "duration": 22105,
-  "status": "passed"
+  "status": "undefined"
 });
 });
