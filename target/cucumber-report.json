@@ -1,0 +1,245 @@
+[
+  {
+    "id": "registration-paths",
+    "description": "",
+    "name": "Registration Paths",
+    "keyword": "Feature",
+    "line": 1,
+    "elements": [
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 3,
+        "type": "background"
+      },
+      {
+        "id": "registration-paths;train-with-one-car.",
+        "description": "",
+        "name": "Train with one car.",
+        "keyword": "Scenario",
+        "line": 6,
+        "steps": [
+          {
+            "name": "a unsorted train \"7\" in a three way train track.",
+            "keyword": "Given ",
+            "line": 8
+          },
+          {
+            "name": "train size is equal to \"1\"",
+            "keyword": "When ",
+            "line": 9
+          },
+          {
+            "name": "\"side\" track is \"empty\"",
+            "keyword": "And ",
+            "line": 10
+          },
+          {
+            "result": {
+              "duration": 137367,
+              "status": "passed"
+            },
+            "name": "move the next car in \"input\" track into \"exit\" track",
+            "keyword": "Then ",
+            "line": 11,
+            "match": {
+              "arguments": [
+                {
+                  "val": "input",
+                  "offset": 22
+                },
+                {
+                  "val": "exit",
+                  "offset": 41
+                }
+              ],
+              "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "comments": [
+          {
+            "value": "# All trains start in the input track.",
+            "line": 4
+          }
+        ]
+      },
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 3,
+        "type": "background"
+      },
+      {
+        "id": "registration-paths;train-with-cars-\"375\"",
+        "description": "",
+        "name": "Train with cars \"375\"",
+        "keyword": "Scenario",
+        "line": 13,
+        "steps": [
+          {
+            "name": "a unsorted train \"375\" in a three way train track.",
+            "keyword": "Given ",
+            "line": 15
+          },
+          {
+            "name": "\"side\" track is \"empty\"",
+            "keyword": "When ",
+            "line": 17
+          },
+          {
+            "name": "move the next car in \"input\" track into \"side\" track",
+            "keyword": "Then ",
+            "line": 18
+          },
+          {
+            "name": "the next car in input track is \"greater\" than the next car in siding track",
+            "keyword": "When ",
+            "line": 20
+          },
+          {
+            "name": "move the next car in \"input\" track into \"exit\" track",
+            "keyword": "Then ",
+            "line": 21
+          },
+          {
+            "name": "the next car in input track is \"smaller\" than the next car in siding track",
+            "keyword": "When ",
+            "line": 23
+          },
+          {
+            "name": "move the next car in side track into exit track, and move next car in input track into side track",
+            "keyword": "Then ",
+            "line": 24
+          },
+          {
+            "name": "\"input\" track is \"empty\"",
+            "keyword": "When ",
+            "line": 26
+          },
+          {
+            "name": "\"side\" track is \"not empty\"",
+            "keyword": "And ",
+            "line": 27
+          },
+          {
+            "name": "\"exit\" track is \"not empty\"",
+            "keyword": "And ",
+            "line": 28
+          },
+          {
+            "name": "move exit cars into input track, and move first input track into side track",
+            "keyword": "Then ",
+            "line": 29
+          },
+          {
+            "name": "the next car in input track is \"smaller\" than the next car in siding track",
+            "keyword": "When ",
+            "line": 31
+          },
+          {
+            "name": "move the next car in side track into exit track, and move next car in input track into side track",
+            "keyword": "Then ",
+            "line": 32
+          },
+          {
+            "name": "\"input\" track is \"empty\"",
+            "keyword": "When ",
+            "line": 34
+          },
+          {
+            "name": "\"side\" track is \"not empty\"",
+            "keyword": "And ",
+            "line": 35
+          },
+          {
+            "name": "\"exit\" track is \"not empty\"",
+            "keyword": "And ",
+            "line": 36
+          },
+          {
+            "name": "move exit cars into input track, and move first input track into side track",
+            "keyword": "Then ",
+            "line": 37
+          },
+          {
+            "name": "\"side\" track is \"not empty\"",
+            "keyword": "When ",
+            "line": 39
+          },
+          {
+            "name": "\"input\" track is \"empty\"",
+            "keyword": "And ",
+            "line": 40
+          },
+          {
+            "name": "\"exit\" track is \"empty\"",
+            "keyword": "And ",
+            "line": 41
+          },
+          {
+            "name": "train is sorted! move cars into input track and then to exit track.",
+            "keyword": "Then ",
+            "line": 42
+          },
+          {
+            "result": {
+              "duration": 69868,
+              "status": "passed"
+            },
+            "name": "check the train is sorted",
+            "keyword": "And ",
+            "line": 43,
+            "match": {
+              "location": "TrainSortingStories.check_the_train_is_sorted()"
+            }
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 3,
+        "type": "background"
+      },
+      {
+        "id": "registration-paths;train-with-cars-\"5647382901\"",
+        "description": "",
+        "name": "Train with cars \"5647382901\"",
+        "keyword": "Scenario",
+        "line": 45,
+        "steps": [
+          {
+            "name": "a unsorted train \"5647382901\" in a three way train track.",
+            "keyword": "Given ",
+            "line": 47
+          },
+          {
+            "name": "train is sorted",
+            "keyword": "When ",
+            "line": 48
+          },
+          {
+            "result": {
+              "duration": 29211,
+              "status": "passed"
+            },
+            "name": "check the train is sorted",
+            "keyword": "Then ",
+            "line": 49,
+            "match": {
+              "location": "TrainSortingStories.check_the_train_is_sorted()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "org\\cucumber\\tt\\TrainSortingStories.feature"
+  }
+]
