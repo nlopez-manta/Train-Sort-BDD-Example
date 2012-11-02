@@ -33,14 +33,19 @@ formatter.step({
   "line": 8
 });
 formatter.step({
-  "name": "\"side\" track is \"empty\"",
+  "name": "train size is equal to \"1\"",
   "keyword": "When ",
   "line": 9
 });
 formatter.step({
-  "name": "move the next car in input track into exit track",
-  "keyword": "Then ",
+  "name": "\"side\" track is \"empty\"",
+  "keyword": "And ",
   "line": 10
+});
+formatter.step({
+  "name": "move the next car in \"input\" track into \"exit\" track",
+  "keyword": "Then ",
+  "line": 11
 });
 formatter.match({
   "arguments": [
@@ -52,7 +57,20 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 174464812,
+  "duration": 194122507,
+  "status": "passed"
+});
+formatter.match({
+  "arguments": [
+    {
+      "val": "1",
+      "offset": 24
+    }
+  ],
+  "location": "TrainSortingStories.train_size_is_equal_to(String)"
+});
+formatter.result({
+  "duration": 101446,
   "status": "passed"
 });
 formatter.match({
@@ -69,14 +87,24 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 73026,
+  "duration": 126709,
   "status": "passed"
 });
 formatter.match({
-  "location": "TrainSortingStories.move_the_next_car_in_input_track_into_exit_track()"
+  "arguments": [
+    {
+      "val": "input",
+      "offset": 22
+    },
+    {
+      "val": "exit",
+      "offset": 41
+    }
+  ],
+  "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 28026,
+  "duration": 137367,
   "status": "passed"
 });
 formatter.background({
@@ -91,118 +119,118 @@ formatter.scenario({
   "description": "",
   "name": "Train with cars \"375\"",
   "keyword": "Scenario",
-  "line": 12,
+  "line": 13,
   "type": "scenario"
 });
 formatter.step({
   "name": "a unsorted train \"375\" in a three way train track.",
   "keyword": "Given ",
-  "line": 14
+  "line": 15
 });
 formatter.step({
   "name": "\"side\" track is \"empty\"",
   "keyword": "When ",
-  "line": 16
+  "line": 17
 });
 formatter.step({
-  "name": "move the next car in the input track and move it to the side track.",
+  "name": "move the next car in \"input\" track into \"side\" track",
   "keyword": "Then ",
-  "line": 17
+  "line": 18
 });
 formatter.step({
   "name": "the next car in input track is \"greater\" than the next car in siding track",
   "keyword": "When ",
-  "line": 19
+  "line": 20
 });
 formatter.step({
-  "name": "move the next car in input track into exit track",
+  "name": "move the next car in \"input\" track into \"exit\" track",
   "keyword": "Then ",
-  "line": 20
+  "line": 21
 });
 formatter.step({
   "name": "the next car in input track is \"smaller\" than the next car in siding track",
   "keyword": "When ",
-  "line": 22
+  "line": 23
 });
 formatter.step({
   "name": "move the next car in side track into exit track, and move next car in input track into side track",
   "keyword": "Then ",
-  "line": 23
+  "line": 24
 });
 formatter.step({
   "name": "\"input\" track is \"empty\"",
   "keyword": "When ",
-  "line": 25
-});
-formatter.step({
-  "name": "\"side\" track is \"not empty\"",
-  "keyword": "And ",
   "line": 26
 });
 formatter.step({
-  "name": "\"exit\" track is \"not empty\"",
+  "name": "\"side\" track is \"not empty\"",
   "keyword": "And ",
   "line": 27
 });
 formatter.step({
+  "name": "\"exit\" track is \"not empty\"",
+  "keyword": "And ",
+  "line": 28
+});
+formatter.step({
   "name": "move exit cars into input track, and move first input track into side track",
   "keyword": "Then ",
-  "line": 28
+  "line": 29
 });
 formatter.step({
   "name": "the next car in input track is \"smaller\" than the next car in siding track",
   "keyword": "When ",
-  "line": 30
+  "line": 31
 });
 formatter.step({
   "name": "move the next car in side track into exit track, and move next car in input track into side track",
   "keyword": "Then ",
-  "line": 31
+  "line": 32
 });
 formatter.step({
   "name": "\"input\" track is \"empty\"",
   "keyword": "When ",
-  "line": 33
-});
-formatter.step({
-  "name": "\"side\" track is \"not empty\"",
-  "keyword": "And ",
   "line": 34
 });
 formatter.step({
-  "name": "\"exit\" track is \"not empty\"",
+  "name": "\"side\" track is \"not empty\"",
   "keyword": "And ",
   "line": 35
 });
 formatter.step({
+  "name": "\"exit\" track is \"not empty\"",
+  "keyword": "And ",
+  "line": 36
+});
+formatter.step({
   "name": "move exit cars into input track, and move first input track into side track",
   "keyword": "Then ",
-  "line": 36
+  "line": 37
 });
 formatter.step({
   "name": "\"side\" track is \"not empty\"",
   "keyword": "When ",
-  "line": 38
+  "line": 39
 });
 formatter.step({
   "name": "\"input\" track is \"empty\"",
   "keyword": "And ",
-  "line": 39
+  "line": 40
 });
 formatter.step({
   "name": "\"exit\" track is \"empty\"",
   "keyword": "And ",
-  "line": 40
+  "line": 41
 });
 formatter.step({
   "name": "train is sorted! move cars into input track and then to exit track.",
   "keyword": "Then ",
-  "line": 41
+  "line": 42
 });
 formatter.step({
   "name": "check the train is sorted",
   "keyword": "And ",
-  "line": 42
+  "line": 43
 });
 formatter.match({
   "arguments": [
@@ -214,7 +242,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 63552,
+  "duration": 101052,
   "status": "passed"
 });
 formatter.match({
@@ -231,14 +259,24 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 44605,
+  "duration": 96710,
   "status": "passed"
 });
 formatter.match({
-  "location": "TrainSortingStories.move_the_next_car_in_the_input_track_and_moves_it_to_the_side_track()"
+  "arguments": [
+    {
+      "val": "input",
+      "offset": 22
+    },
+    {
+      "val": "side",
+      "offset": 41
+    }
+  ],
+  "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 14605,
+  "duration": 114078,
   "status": "passed"
 });
 formatter.match({
@@ -251,14 +289,24 @@ formatter.match({
   "location": "TrainSortingStories.the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String)"
 });
 formatter.result({
-  "duration": 70263,
+  "duration": 110525,
   "status": "passed"
 });
 formatter.match({
-  "location": "TrainSortingStories.move_the_next_car_in_input_track_into_exit_track()"
+  "arguments": [
+    {
+      "val": "input",
+      "offset": 22
+    },
+    {
+      "val": "exit",
+      "offset": 41
+    }
+  ],
+  "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 22500,
+  "duration": 98683,
   "status": "passed"
 });
 formatter.match({
@@ -271,14 +319,14 @@ formatter.match({
   "location": "TrainSortingStories.the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String)"
 });
 formatter.result({
-  "duration": 75788,
+  "duration": 73815,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_side_track_into_exit_track_and_move_next_car_in_input_track_into_side_track()"
 });
 formatter.result({
-  "duration": 36315,
+  "duration": 44210,
   "status": "passed"
 });
 formatter.match({
@@ -295,7 +343,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 197761,
+  "duration": 94736,
   "status": "passed"
 });
 formatter.match({
@@ -312,7 +360,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 101446,
+  "duration": 163025,
   "status": "passed"
 });
 formatter.match({
@@ -329,14 +377,14 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 87631,
+  "duration": 71446,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.move_exit_cars_into_input_track_and_move_first_input_track_into_side_track()"
 });
 formatter.result({
-  "duration": 37105,
+  "duration": 43815,
   "status": "passed"
 });
 formatter.match({
@@ -349,14 +397,14 @@ formatter.match({
   "location": "TrainSortingStories.the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String)"
 });
 formatter.result({
-  "duration": 97499,
+  "duration": 62762,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_side_track_into_exit_track_and_move_next_car_in_input_track_into_side_track()"
 });
 formatter.result({
-  "duration": 35526,
+  "duration": 36710,
   "status": "passed"
 });
 formatter.match({
@@ -373,7 +421,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 82894,
+  "duration": 80130,
   "status": "passed"
 });
 formatter.match({
@@ -390,7 +438,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 87236,
+  "duration": 107762,
   "status": "passed"
 });
 formatter.match({
@@ -407,14 +455,14 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 79736,
+  "duration": 79342,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.move_exit_cars_into_input_track_and_move_first_input_track_into_side_track()"
 });
 formatter.result({
-  "duration": 33947,
+  "duration": 34736,
   "status": "passed"
 });
 formatter.match({
@@ -431,7 +479,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 619731,
+  "duration": 81709,
   "status": "passed"
 });
 formatter.match({
@@ -448,7 +496,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 76973,
+  "duration": 96709,
   "status": "passed"
 });
 formatter.match({
@@ -465,21 +513,21 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 86052,
+  "duration": 87630,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.train_is_sorted_move_cars_into_input_track_and_then_to_exit_track()"
 });
 formatter.result({
-  "duration": 39473,
+  "duration": 61183,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.check_the_train_is_sorted()"
 });
 formatter.result({
-  "duration": 73421,
+  "duration": 69868,
   "status": "passed"
 });
 formatter.background({
@@ -494,23 +542,23 @@ formatter.scenario({
   "description": "",
   "name": "Train with cars \"5647382901\"",
   "keyword": "Scenario",
-  "line": 44,
+  "line": 45,
   "type": "scenario"
 });
 formatter.step({
   "name": "a unsorted train \"5647382901\" in a three way train track.",
   "keyword": "Given ",
-  "line": 46
+  "line": 47
 });
 formatter.step({
   "name": "train is sorted",
   "keyword": "When ",
-  "line": 47
+  "line": 48
 });
 formatter.step({
   "name": "check the train is sorted",
   "keyword": "Then ",
-  "line": 48
+  "line": 49
 });
 formatter.match({
   "arguments": [
@@ -522,21 +570,21 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 91578,
+  "duration": 103420,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.train_is_sorted()"
 });
 formatter.result({
-  "duration": 289734,
+  "duration": 284208,
   "status": "passed"
 });
 formatter.match({
   "location": "TrainSortingStories.check_the_train_is_sorted()"
 });
 formatter.result({
-  "duration": 22499,
+  "duration": 29211,
   "status": "passed"
 });
 });

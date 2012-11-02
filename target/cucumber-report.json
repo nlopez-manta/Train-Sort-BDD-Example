@@ -26,20 +26,35 @@
             "line": 8
           },
           {
-            "name": "\"side\" track is \"empty\"",
+            "name": "train size is equal to \"1\"",
             "keyword": "When ",
             "line": 9
           },
           {
+            "name": "\"side\" track is \"empty\"",
+            "keyword": "And ",
+            "line": 10
+          },
+          {
             "result": {
-              "duration": 28026,
+              "duration": 137367,
               "status": "passed"
             },
-            "name": "move the next car in input track into exit track",
+            "name": "move the next car in \"input\" track into \"exit\" track",
             "keyword": "Then ",
-            "line": 10,
+            "line": 11,
             "match": {
-              "location": "TrainSortingStories.move_the_next_car_in_input_track_into_exit_track()"
+              "arguments": [
+                {
+                  "val": "input",
+                  "offset": 22
+                },
+                {
+                  "val": "exit",
+                  "offset": 41
+                }
+              ],
+              "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
             }
           }
         ],
@@ -63,121 +78,121 @@
         "description": "",
         "name": "Train with cars \"375\"",
         "keyword": "Scenario",
-        "line": 12,
+        "line": 13,
         "steps": [
           {
             "name": "a unsorted train \"375\" in a three way train track.",
             "keyword": "Given ",
-            "line": 14
+            "line": 15
           },
           {
             "name": "\"side\" track is \"empty\"",
             "keyword": "When ",
-            "line": 16
+            "line": 17
           },
           {
-            "name": "move the next car in the input track and move it to the side track.",
+            "name": "move the next car in \"input\" track into \"side\" track",
             "keyword": "Then ",
-            "line": 17
+            "line": 18
           },
           {
             "name": "the next car in input track is \"greater\" than the next car in siding track",
             "keyword": "When ",
-            "line": 19
+            "line": 20
           },
           {
-            "name": "move the next car in input track into exit track",
+            "name": "move the next car in \"input\" track into \"exit\" track",
             "keyword": "Then ",
-            "line": 20
+            "line": 21
           },
           {
             "name": "the next car in input track is \"smaller\" than the next car in siding track",
             "keyword": "When ",
-            "line": 22
+            "line": 23
           },
           {
             "name": "move the next car in side track into exit track, and move next car in input track into side track",
             "keyword": "Then ",
-            "line": 23
+            "line": 24
           },
           {
             "name": "\"input\" track is \"empty\"",
             "keyword": "When ",
-            "line": 25
-          },
-          {
-            "name": "\"side\" track is \"not empty\"",
-            "keyword": "And ",
             "line": 26
           },
           {
-            "name": "\"exit\" track is \"not empty\"",
+            "name": "\"side\" track is \"not empty\"",
             "keyword": "And ",
             "line": 27
           },
           {
+            "name": "\"exit\" track is \"not empty\"",
+            "keyword": "And ",
+            "line": 28
+          },
+          {
             "name": "move exit cars into input track, and move first input track into side track",
             "keyword": "Then ",
-            "line": 28
+            "line": 29
           },
           {
             "name": "the next car in input track is \"smaller\" than the next car in siding track",
             "keyword": "When ",
-            "line": 30
+            "line": 31
           },
           {
             "name": "move the next car in side track into exit track, and move next car in input track into side track",
             "keyword": "Then ",
-            "line": 31
+            "line": 32
           },
           {
             "name": "\"input\" track is \"empty\"",
             "keyword": "When ",
-            "line": 33
-          },
-          {
-            "name": "\"side\" track is \"not empty\"",
-            "keyword": "And ",
             "line": 34
           },
           {
-            "name": "\"exit\" track is \"not empty\"",
+            "name": "\"side\" track is \"not empty\"",
             "keyword": "And ",
             "line": 35
           },
           {
+            "name": "\"exit\" track is \"not empty\"",
+            "keyword": "And ",
+            "line": 36
+          },
+          {
             "name": "move exit cars into input track, and move first input track into side track",
             "keyword": "Then ",
-            "line": 36
+            "line": 37
           },
           {
             "name": "\"side\" track is \"not empty\"",
             "keyword": "When ",
-            "line": 38
+            "line": 39
           },
           {
             "name": "\"input\" track is \"empty\"",
             "keyword": "And ",
-            "line": 39
+            "line": 40
           },
           {
             "name": "\"exit\" track is \"empty\"",
             "keyword": "And ",
-            "line": 40
+            "line": 41
           },
           {
             "name": "train is sorted! move cars into input track and then to exit track.",
             "keyword": "Then ",
-            "line": 41
+            "line": 42
           },
           {
             "result": {
-              "duration": 73421,
+              "duration": 69868,
               "status": "passed"
             },
             "name": "check the train is sorted",
             "keyword": "And ",
-            "line": 42,
+            "line": 43,
             "match": {
               "location": "TrainSortingStories.check_the_train_is_sorted()"
             }
@@ -197,26 +212,26 @@
         "description": "",
         "name": "Train with cars \"5647382901\"",
         "keyword": "Scenario",
-        "line": 44,
+        "line": 45,
         "steps": [
           {
             "name": "a unsorted train \"5647382901\" in a three way train track.",
             "keyword": "Given ",
-            "line": 46
+            "line": 47
           },
           {
             "name": "train is sorted",
             "keyword": "When ",
-            "line": 47
+            "line": 48
           },
           {
             "result": {
-              "duration": 22499,
+              "duration": 29211,
               "status": "passed"
             },
             "name": "check the train is sorted",
             "keyword": "Then ",
-            "line": 48,
+            "line": 49,
             "match": {
               "location": "TrainSortingStories.check_the_train_is_sorted()"
             }

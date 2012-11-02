@@ -6,18 +6,19 @@ Feature: Registration Paths
 	Scenario: Train with one car.
 	
   		Given a unsorted train "7" in a three way train track.
-		When "side" track is "empty"
-		Then move the next car in input track into exit track
+  		When train size is equal to "1"
+		And "side" track is "empty"
+		Then move the next car in "input" track into "exit" track
 	
 	Scenario: Train with cars "375"
 	
 		Given a unsorted train "375" in a three way train track.
 		
 		When "side" track is "empty"
-		Then move the next car in the input track and move it to the side track.
+		Then move the next car in "input" track into "side" track
 	
 		When the next car in input track is "greater" than the next car in siding track  
-		Then move the next car in input track into exit track
+		Then move the next car in "input" track into "exit" track
 	
 		When the next car in input track is "smaller" than the next car in siding track
 		Then move the next car in side track into exit track, and move next car in input track into side track
