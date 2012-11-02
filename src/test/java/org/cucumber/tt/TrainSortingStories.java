@@ -19,7 +19,7 @@ import static org.junit.Assert.assertNotNull;
  */
 public class TrainSortingStories {
 	
-	private SimpleTrainSort trainTrack;
+	private TrainSort trainTrack;
 
 	@Given("^a unsorted train \"([^\"]*)\" in a three way train track.$")
 	public void a_unsorted_train_in_a_three_way_train_track(String arg1){
