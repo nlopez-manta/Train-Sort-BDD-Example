@@ -43,7 +43,7 @@ public class SimpleTrainSort {
 		{
 			exitTrack.push(inputTrack.pop());
 		}
-		else if (sideTrack.size() == 0)
+		else if (sideTrack.empty())
 		{
 			sideTrack.push(inputTrack.pop());
 		}
