@@ -45,4 +45,4 @@ Feature: Registration Paths
 		
 		Given a unsorted train "5647382901" in a three way train track.
 		When train is sorted
-		Then check the train is sorted
+		Then train is sorted! check the train is sorted.

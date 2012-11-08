@@ -57,7 +57,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 191501876,
+  "duration": 170844881,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "TrainSortingStories.train_size_is_equal_to(String)"
 });
 formatter.result({
-  "duration": 71052,
+  "duration": 61184,
   "status": "passed"
 });
 formatter.match({
@@ -87,7 +87,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 74604,
+  "duration": 56447,
   "status": "passed"
 });
 formatter.match({
@@ -104,7 +104,7 @@ formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 94341,
+  "duration": 68289,
   "status": "passed"
 });
 formatter.background({
@@ -128,32 +128,32 @@ formatter.step({
   "line": 15
 });
 formatter.step({
-  "name": "\"side\" track is \"empty\"",
+  "name": "\"exit\" track is \"empty\"",
   "keyword": "When ",
   "line": 17
 });
 formatter.step({
-  "name": "move the next car in \"input\" track into \"side\" track",
+  "name": "move the next car in \"input\" track into \"exit\" track",
   "keyword": "Then ",
   "line": 18
 });
 formatter.step({
-  "name": "the next car in input track is \"greater\" than the next car in siding track",
+  "name": "the next car in input track is \"greater\" than the next car in exit track",
   "keyword": "When ",
   "line": 20
 });
 formatter.step({
-  "name": "move the next car in \"input\" track into \"exit\" track",
+  "name": "move the next car in \"input\" track into \"side\" track",
   "keyword": "Then ",
   "line": 21
 });
 formatter.step({
-  "name": "the next car in input track is \"smaller\" than the next car in siding track",
+  "name": "the next car in input track is \"smaller\" than the next car in exit track",
   "keyword": "When ",
   "line": 23
 });
 formatter.step({
-  "name": "move the next car in side track into exit track, and move next car in input track into side track",
+  "name": "move the next car in exit track into side track, and move next car in input track into exit track",
   "keyword": "Then ",
   "line": 24
 });
@@ -173,17 +173,17 @@ formatter.step({
   "line": 28
 });
 formatter.step({
-  "name": "move exit cars into input track, and move first input track into side track",
+  "name": "move side cars into input track, and move first input car into exit track",
   "keyword": "Then ",
   "line": 29
 });
 formatter.step({
-  "name": "the next car in input track is \"smaller\" than the next car in siding track",
+  "name": "the next car in input track is \"smaller\" than the next car in exit track",
   "keyword": "When ",
   "line": 31
 });
 formatter.step({
-  "name": "move the next car in side track into exit track, and move next car in input track into side track",
+  "name": "move the next car in exit track into side track, and move next car in input track into exit track",
   "keyword": "Then ",
   "line": 32
 });
@@ -203,12 +203,12 @@ formatter.step({
   "line": 36
 });
 formatter.step({
-  "name": "move exit cars into input track, and move first input track into side track",
+  "name": "move side cars into input track, and move first input car into exit track",
   "keyword": "Then ",
   "line": 37
 });
 formatter.step({
-  "name": "\"side\" track is \"not empty\"",
+  "name": "\"side\" track is \"empty\"",
   "keyword": "When ",
   "line": 39
 });
@@ -218,19 +218,14 @@ formatter.step({
   "line": 40
 });
 formatter.step({
-  "name": "\"exit\" track is \"empty\"",
+  "name": "\"exit\" track is \"not empty\"",
   "keyword": "And ",
   "line": 41
 });
 formatter.step({
-  "name": "train is sorted! move cars into input track and then to exit track.",
+  "name": "train is sorted! check the train is sorted.",
   "keyword": "Then ",
   "line": 42
-});
-formatter.step({
-  "name": "check the train is sorted",
-  "keyword": "And ",
-  "line": 43
 });
 formatter.match({
   "arguments": [
@@ -242,13 +237,13 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 63946,
+  "duration": 56053,
   "status": "passed"
 });
 formatter.match({
   "arguments": [
     {
-      "val": "side",
+      "val": "exit",
       "offset": 1
     },
     {
@@ -259,7 +254,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 60395,
+  "duration": 44211,
   "status": "passed"
 });
 formatter.match({
@@ -269,16 +264,16 @@ formatter.match({
       "offset": 22
     },
     {
-      "val": "side",
+      "val": "exit",
       "offset": 41
     }
   ],
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 644204,
+  "duration": 495788,
   "status": "failed",
-  "error_message": "java.lang.AssertionError: Error the conditions do not exist\r\n\tat org.junit.Assert.fail(Assert.java:93)\r\n\tat org.junit.Assert.assertTrue(Assert.java:43)\r\n\tat org.junit.Assert.assertNotNull(Assert.java:526)\r\n\tat org.cucumber.tt.TrainSortingStories.move_the_next_car_in_track_into_track(TrainSortingStories.java:86)\r\n\tat ✽.Then move the next car in \"input\" track into \"side\" track(org\\cucumber\\tt\\TrainSortingStories.feature:18)\r\n"
+  "error_message": "java.lang.AssertionError: Failde creating train with one car expected:\u003c3\u003e but was:\u003c2\u003e\r\n\tat org.junit.Assert.fail(Assert.java:93)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:128)\r\n\tat org.junit.Assert.assertEquals(Assert.java:472)\r\n\tat org.cucumber.tt.TrainSortingStories.move_the_next_car_in_track_into_track(TrainSortingStories.java:81)\r\n\tat ✽.Then move the next car in \"input\" track into \"exit\" track(org\\cucumber\\tt\\TrainSortingStories.feature:18)\r\n"
 });
 formatter.match({});
 formatter.result({
@@ -291,7 +286,7 @@ formatter.match({
       "offset": 22
     },
     {
-      "val": "exit",
+      "val": "side",
       "offset": 41
     }
   ],
@@ -427,7 +422,7 @@ formatter.match({
       "offset": 1
     },
     {
-      "val": "not empty",
+      "val": "empty",
       "offset": 17
     }
   ],
@@ -459,7 +454,7 @@ formatter.match({
       "offset": 1
     },
     {
-      "val": "empty",
+      "val": "not empty",
       "offset": 17
     }
   ],
@@ -467,10 +462,6 @@ formatter.match({
 });
 formatter.result({
   "status": "skipped"
-});
-formatter.match({});
-formatter.result({
-  "status": "undefined"
 });
 formatter.match({});
 formatter.result({
@@ -488,23 +479,23 @@ formatter.scenario({
   "description": "",
   "name": "Train with cars \"5647382901\"",
   "keyword": "Scenario",
-  "line": 45,
+  "line": 44,
   "type": "scenario"
 });
 formatter.step({
   "name": "a unsorted train \"5647382901\" in a three way train track.",
   "keyword": "Given ",
-  "line": 47
+  "line": 46
 });
 formatter.step({
   "name": "train is sorted",
   "keyword": "When ",
-  "line": 48
+  "line": 47
 });
 formatter.step({
-  "name": "check the train is sorted",
+  "name": "train is sorted! check the train is sorted.",
   "keyword": "Then ",
-  "line": 49
+  "line": 48
 });
 formatter.match({
   "arguments": [
@@ -516,7 +507,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 88420,
+  "duration": 86447,
   "status": "passed"
 });
 formatter.match({});
