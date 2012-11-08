@@ -78,13 +78,13 @@ public class TrainSortingStories {
 		
 		if ( arg1.equals("input") && arg2.equals("exit"))
 		{
-			assertEquals("Failde creating train with one car",trainTrack.numOfCarsInInput(),numOfCarsInInput-1);
-			assertEquals("Failde creating train with one car",trainTrack.numOfCarsInExit(),numOfCarsInExit+1);
+			assertEquals("Failed creating train with one car",trainTrack.numOfCarsInInput(),numOfCarsInInput-1);
+			assertEquals("Failed creating train with one car",trainTrack.numOfCarsInExit(),numOfCarsInExit+1);
 		}
 		else if ( arg1.equals("input") && arg2.equals("side"))
 		{
-			assertEquals("Failde creating train with one car",trainTrack.numOfCarsInInput(),numOfCarsInInput-1);
-			assertEquals("Failde creating train with one car",trainTrack.numOfCarsInSide(),numOfCarsInSide+1);
+			assertEquals("Failed creating train with one car",trainTrack.numOfCarsInInput(),numOfCarsInInput-1);
+			assertEquals("Failed creating train with one car",trainTrack.numOfCarsInSide(),numOfCarsInSide+1);
 		}
 		else
 		{
@@ -94,19 +94,19 @@ public class TrainSortingStories {
 	}
 	
 	
-	@When("^the next car in input track is \"([^\"]*)\" than the next car in siding track$")
+	@When("^the next car in input track is \"([^\"]*)\" than the next car in exit track$")
 	public void the_next_car_in_input_track_is_than_the_next_car_in_siding_car(String arg1){
 	     if ( arg1.equals("greater") )
 	     {
-	    	 assertTrue("Check that next input car is greater than next side car", trainTrack.peekInput() > trainTrack.peekSide());
+	    	 assertTrue("Check that next input car is greater than next side car", trainTrack.peekInput() > trainTrack.peekExit());
 	     }
 	     else if ( arg1.equals("smaller") )
 	     {
-	    	 assertTrue("Check that next input car is greater than next side car", trainTrack.peekInput() < trainTrack.peekSide());
+	    	 assertTrue("Check that next input car is greater than next side car", trainTrack.peekInput() < trainTrack.peekExit());
 	     }
 	}
 	
-	@Then("^move the next car in side track into exit track, and move next car in input track into side track$")
+	@Then("^move the next car in exit track into side track, and move next car in input track into exit track$")
 	public void move_the_next_car_in_side_track_into_exit_track_and_move_next_car_in_input_track_into_side_track() throws Throwable {
 		int currentInputTrackSize = trainTrack.numOfCarsInInput();
 		int currentSideTrackSize =  trainTrack.numOfCarsInSide();
@@ -114,12 +114,12 @@ public class TrainSortingStories {
 		
 		trainTrack.simpleSortStep();
 		
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInInput(),currentInputTrackSize-1);
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInSide(),currentSideTrackSize);
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInExit(),currentExitTrackSize+1);
+		assertEquals("Wrong number of cars in input track",trainTrack.numOfCarsInInput(),currentInputTrackSize-1);
+		assertEquals("Wrong number of cars in side track",trainTrack.numOfCarsInSide(),currentSideTrackSize+1);
+		assertEquals("Wrong number of cars in exit track",trainTrack.numOfCarsInExit(),currentExitTrackSize);
 	}
 	
-	@Then("^move exit cars into input track, and move first input track into side track$")
+	@Then("^^move side cars into input track, and move first input car into exit track$")
 	public void move_exit_cars_into_input_track_and_move_first_input_track_into_side_track(){
 		int currentInputTrackSize = trainTrack.numOfCarsInInput();
 		int currentSideTrackSize =  trainTrack.numOfCarsInSide();
@@ -127,27 +127,14 @@ public class TrainSortingStories {
 		
 		trainTrack.simpleSortStep();
 		
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInInput(),currentExitTrackSize-1);
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInSide(),currentSideTrackSize+1);
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInExit(),currentInputTrackSize);
+		assertEquals("Wrong number of cars in input track",trainTrack.numOfCarsInInput(),currentSideTrackSize-1);
+		assertEquals("Wrong number of cars in side track",trainTrack.numOfCarsInSide(),currentInputTrackSize);
+		assertEquals("Wrong number of cars in exit track",trainTrack.numOfCarsInExit(),currentExitTrackSize+1);
 	    
 	}
 
-	@Then("^train is sorted! move cars into input track and then to exit track.$")
+	@Then("^train is sorted! check the train is sorted.$")
 	public void train_is_sorted_move_cars_into_input_track_and_then_to_exit_track() throws Throwable {
-		int currentInputTrackSize = trainTrack.numOfCarsInInput();
-		int currentSideTrackSize =  trainTrack.numOfCarsInSide();
-		int currentExitTrackSize =  trainTrack.numOfCarsInExit();
-		
-		trainTrack.simpleSortStep();
-		
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInInput(),currentInputTrackSize);
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInSide(),currentExitTrackSize);
-		assertEquals("Failde creating train with one car",trainTrack.numOfCarsInExit(),currentSideTrackSize);
-	}
-	
-	@Then("^check the train is sorted$")
-	public void check_the_train_is_sorted(){
 		Stack<Integer> exitTrack = trainTrack.getExitTrack();
 		
 		for (int i = 0 ; i < exitTrack.size()-1; i++)
@@ -155,6 +142,7 @@ public class TrainSortingStories {
 			assertTrue("Train is not sorted", exitTrack.get(i) < exitTrack.get(i+1));
 		}
 	}
+	
 	
 	@When("^train is sorted$")
 	public void train_is_sorted(){

@@ -43,33 +43,25 @@ public class SimpleTrainSort implements TrainSort {
 	 * @return true or false if the train is sorted.
 	 */
 	public boolean simpleSortStep() {
-		if (inputTrack.size() == 1 && sideTrack.empty()) {
+		if (inputTrack.size() == 1 && exitTrack.empty()) {
 			exitTrack.push(inputTrack.pop());
-		} else if (sideTrack.empty()) {
-			sideTrack.push(inputTrack.pop());
+		} else if (exitTrack.empty()) {
+			exitTrack.push(inputTrack.pop());
 		} else if (inputTrack.empty() && !sideTrack.empty()
 				&& !exitTrack.empty()) {
-			while (!exitTrack.empty()) {
-				inputTrack.push(exitTrack.pop());
-			}
-
-			sideTrack.push(inputTrack.pop());
-		} else if (inputTrack.empty() && !sideTrack.empty()
-				&& exitTrack.empty()) {
 			while (!sideTrack.empty()) {
 				inputTrack.push(sideTrack.pop());
 			}
 
-			while (!inputTrack.empty()) {
-				exitTrack.push(inputTrack.pop());
-			}
-
-			return true;
-		} else if (inputTrack.peek() > sideTrack.peek()) {
 			exitTrack.push(inputTrack.pop());
-		} else if (inputTrack.peek() < sideTrack.peek()) {
-			exitTrack.push(sideTrack.pop());
+		} else if (inputTrack.empty() && sideTrack.empty()
+				&& !exitTrack.empty()) {
+			return true;
+		} else if (inputTrack.peek() > exitTrack.peek()) {
 			sideTrack.push(inputTrack.pop());
+		} else if (inputTrack.peek() < exitTrack.peek()) {
+			sideTrack.push(exitTrack.pop());
+			exitTrack.push(inputTrack.pop());
 		}
 
 		return false;
@@ -126,12 +118,12 @@ public class SimpleTrainSort implements TrainSort {
 	}
 
 	/**
-	 * Returns the ID of the next available car in the side track.
+	 * Returns the ID of the next available car in the exit track.
 	 * 
 	 * @return car's ID
 	 */
-	public int peekSide() {
-		return sideTrack.peek();
+	public int peekExit() {
+		return exitTrack.peek();
 	}
 
 	/**
