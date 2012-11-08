@@ -45,7 +45,7 @@ public class SimpleTrainSort implements TrainSort {
 	public boolean simpleSortStep() {
 		if (inputTrack.size() == 1 && sideTrack.empty()) {
 			exitTrack.push(inputTrack.pop());
-		} else if (sideTrack.empty()) {
+		} else if (exitTrack.empty()) {
 			// CONTINUE HERE
 		} 
 
