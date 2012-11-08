@@ -43,7 +43,7 @@ public class SimpleTrainSort implements TrainSort {
 	 * @return true or false if the train is sorted.
 	 */
 	public boolean simpleSortStep() {
-		if (inputTrack.size() == 1 && sideTrack.empty()) {
+		if (inputTrack.size() == 1 && exitTrack.empty()) {
 			exitTrack.push(inputTrack.pop());
 		} else if (exitTrack.empty()) {
 			// CONTINUE HERE
@@ -103,12 +103,12 @@ public class SimpleTrainSort implements TrainSort {
 	}
 
 	/**
-	 * Returns the ID of the next available car in the side track.
+	 * Returns the ID of the next available car in the exit track.
 	 * 
 	 * @return car's ID
 	 */
-	public int peekSide() {
-		return sideTrack.peek();
+	public int peekExit() {
+		return exitTrack.peek();
 	}
 
 	/**

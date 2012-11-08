@@ -78,8 +78,8 @@ public class TrainSortingStories {
 
 		if ( arg1.equals("input") && arg2.equals("exit"))
 		{
-			assertEquals("Failde creating train with one car",trainTrack.numOfCarsInInput(),numOfCarsInInput-1);
-			assertEquals("Failde creating train with one car",trainTrack.numOfCarsInExit(),numOfCarsInExit+1);
+			assertEquals("Wrong number of cars in input track",trainTrack.numOfCarsInInput(),numOfCarsInInput-1);
+			assertEquals("Wrong number of cars in exit track",trainTrack.numOfCarsInExit(),numOfCarsInExit+1);
 		}
 		else
 		{

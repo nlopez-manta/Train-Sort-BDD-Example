@@ -68,7 +68,7 @@ public interface TrainSort {
 	 * 
 	 * @return car's ID
 	 */
-	public int peekSide();
+	public int peekExit();
 
 	/**
 	 * Returns the ID of the next available car in the input track.

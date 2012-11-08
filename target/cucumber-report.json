@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 68289,
+              "duration": 57236,
               "status": "passed"
             },
             "name": "move the next car in \"input\" track into \"exit\" track",

@@ -57,7 +57,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 170844881,
+  "duration": 176454474,
   "status": "passed"
 });
 formatter.match({
@@ -70,7 +70,7 @@ formatter.match({
   "location": "TrainSortingStories.train_size_is_equal_to(String)"
 });
 formatter.result({
-  "duration": 61184,
+  "duration": 58421,
   "status": "passed"
 });
 formatter.match({
@@ -87,7 +87,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 56447,
+  "duration": 55263,
   "status": "passed"
 });
 formatter.match({
@@ -104,7 +104,7 @@ formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 68289,
+  "duration": 57236,
   "status": "passed"
 });
 formatter.background({
@@ -237,7 +237,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 56053,
+  "duration": 56842,
   "status": "passed"
 });
 formatter.match({
@@ -254,7 +254,7 @@ formatter.match({
   "location": "TrainSortingStories.track_is(String,String)"
 });
 formatter.result({
-  "duration": 44211,
+  "duration": 45790,
   "status": "passed"
 });
 formatter.match({
@@ -271,7 +271,7 @@ formatter.match({
   "location": "TrainSortingStories.move_the_next_car_in_track_into_track(String,String)"
 });
 formatter.result({
-  "duration": 495788,
+  "duration": 541182,
   "status": "failed",
   "error_message": "java.lang.AssertionError: Failde creating train with one car expected:\u003c3\u003e but was:\u003c2\u003e\r\n\tat org.junit.Assert.fail(Assert.java:93)\r\n\tat org.junit.Assert.failNotEquals(Assert.java:647)\r\n\tat org.junit.Assert.assertEquals(Assert.java:128)\r\n\tat org.junit.Assert.assertEquals(Assert.java:472)\r\n\tat org.cucumber.tt.TrainSortingStories.move_the_next_car_in_track_into_track(TrainSortingStories.java:81)\r\n\tat ✽.Then move the next car in \"input\" track into \"exit\" track(org\\cucumber\\tt\\TrainSortingStories.feature:18)\r\n"
 });
@@ -507,7 +507,7 @@ formatter.match({
   "location": "TrainSortingStories.a_unsorted_train_in_a_three_way_train_track(String)"
 });
 formatter.result({
-  "duration": 86447,
+  "duration": 71447,
   "status": "passed"
 });
 formatter.match({});
