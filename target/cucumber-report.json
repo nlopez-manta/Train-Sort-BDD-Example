@@ -37,7 +37,7 @@
           },
           {
             "result": {
-              "duration": 60395,
+              "duration": 80920,
               "status": "passed"
             },
             "name": "move the next car in \"input\" track into \"exit\" track",
@@ -182,7 +182,7 @@
           },
           {
             "result": {
-              "duration": 50131,
+              "duration": 84473,
               "status": "passed"
             },
             "name": "train is sorted! check the train is sorted.",
@@ -221,7 +221,7 @@
           },
           {
             "result": {
-              "duration": 19342,
+              "duration": 26052,
               "status": "passed"
             },
             "name": "train is sorted! check the train is sorted.",
